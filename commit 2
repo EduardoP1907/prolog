@@ -1,0 +1,14 @@
+% Descripción: Constructor cardsSet, crea un mazo de cartas y lo guarda en CS.
+% Dominio: Elemento (list) X NumE (integer) X MaxC (integer) 
+% Seed (integer) X CS (list).
+cardsSet(Elements, NumE, MaxC, Seed, CS):-
+    largoLista(Elements, LargoElementos),
+    Orden is LargoElementos-1,
+    OrdenNumE is NumE-1,
+    isPrime(Orden),
+    isPrime(OrdenNumE),
+    LargoElementos == NumE,
+    MaxC > 0,
+    Seed > 0,
+    crearMazo(Orden, TempCS),
+    maxCards(TempCS, MaxC, CS).
