@@ -1,0 +1,24 @@
+% Lista de Predicados
+
+% cardsSet(Elements, NumE, MaxC, Seed, CS).
+% recorrerCarta(Carta).
+% cardsSetIsDobble(CS).
+% isPrime(Numero).
+% maxCards(CS, MaxC, Result).
+% largoLista(Lista, Largo).
+% agregarCarta(Lista1, Lista2, ListaResultado).
+% primeraCarta(OrdenPrimeraCarta,CartaA).
+% primerCiclo(I,J,NuevoK,Cuerpo).
+% segundoCiclo(Q,I,J,K2,Cuerpo).
+% tercerCiclo(X,Y,K2,Cuerpo).
+% ordenN(OrdenJuego,1,CartaB).
+% ordenNN(OrdenJuego,1,CartaC).
+% nthElement(Posicion, Lista, Elemento).
+% cardsSetNthCard(NumeroCarta, CS, Carta).
+% encontrarCarta(NumeroCarta, MazoCuerpo, Carta).
+% cardsSetFindTotalCards(Carta, TotalCards).
+% calcularOrden(NumeroElementos, Orden).
+% cardsSetMissingCards(Carta, CS).
+% cadenaCarta(Carta, String).
+% cadenaCartas(ListaCartas, String).
+% cardsSetToString(CS, String).
