@@ -1,0 +1,10 @@
+tercerCiclo(X,_,X2,[]):-
+    X2 is X+1,!.
+tercerCiclo(X,Y,K,[Cabeza|Cuerpo]):-
+    segundoCiclo(X,Y,K,1,Cabeza),
+    K2 is K+1,
+    tercerCiclo(X,Y,K2,Cuerpo).
+
+primeraCarta(0,[]):-!.
+primeraCarta(Cabeza,[Cabeza|Cuerpo]):-
+    NuevaCabeza is Cabeza-1,primeraCarta(NuevaCabeza,Cuerpo).
