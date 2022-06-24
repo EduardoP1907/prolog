@@ -1,0 +1,9 @@
+% Descripción: A partir de un mazo, se calcula las cartas faltantes para que sea un
+% mazo valido para jugar.
+% Dominio: Carta de ejemplo, mazo valido.
+calcularOrden(NumeroElementos, Orden):-
+    Orden is NumeroElementos-1.
+cardsSetMissingCards([PrimeraCarta|_], MissingCS):-
+    largoLista(PrimeraCarta, NumeroElementos),
+    calcularOrden(NumeroElementos, Orden),
+    crearMazo(Orden, MissingCS).
