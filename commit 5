@@ -1,0 +1,11 @@
+ordenN(X,NuevoX,[]):-NuevoX is X+1,!.
+ordenN(X,Y,[Cabeza|Cuerpo]):-
+    primerCiclo(X,Y,1,Cabeza),
+    NuevaY is Y+1,ordenN(X,NuevaY,Cuerpo).
+
+ordenNN(X,NuevoX,[]):-
+    NuevoX is X+1,!.
+ordenNN(X,Y,K):- 
+    tercerCiclo(X,Y,1,Q), 
+    agregarCarta(Q,Z,K),
+    NuevoY is Y+1, ordenNN(X,NuevoY,Z).
