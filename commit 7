@@ -1,0 +1,6 @@
+% Descripción: A partir de una carta de muestra, determina cuantas cartas pueden ser creadas.
+% Dominio: Una carta y el resultado (numero) de posibles cartas.
+cardsSetFindTotalCards([], 0).
+cardsSetFindTotalCards(Carta, TotalCards):-
+   largoLista(Carta, Largo),
+   TotalCards is (Largo*Largo-Largo+1).
