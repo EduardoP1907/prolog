@@ -1,0 +1,8 @@
+% Descripción: Este predicado encapsulado se encarga de encontrar la carta o elemento n.
+% Dominio: Numero de la posición, lista de elementos y el elemento a retornar.
+encontrarCarta(0, [],_).
+encontrarCarta(0,[Salida|_],Carta):-
+    Carta = Salida,!.
+encontrarCarta(NumeroCarta, [_|MazoCuerpo], Carta):-
+    NumeroCarta2 is NumeroCarta-1,
+    encontrarCarta(NumeroCarta2, MazoCuerpo, Carta).
