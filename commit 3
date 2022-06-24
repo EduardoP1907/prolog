@@ -1,0 +1,16 @@
+% Descripción: Crea un mazo en simulación al código en JavaScript. 
+% Se utilizan varias recursiones para lograr esto, ya que se realiza la simulación de
+% 3 Ciclos for. 
+primerCiclo(I,_,I2,[1]):-
+    I2 is I+1,!.
+primerCiclo(I,J,K,[Cabeza|Cuerpo]):- 
+    Cabeza is I * J + (K + 1), 
+    NuevoK is K + 1,
+    primerCiclo(I,J,NuevoK,Cuerpo).
+
+segundoCiclo(Q,I,_,W,[I2]):-
+    W is Q+1,I2 is I+1,!.
+segundoCiclo(Q,I,J,K,[Cabeza|Cuerpo]):-
+    Cabeza is (Q+2+Q*(K-1)+(((I-1)*(K-1)+J-1) mod Q)),
+    K2 is K+1,
+    segundoCiclo(Q,I,J,K2,Cuerpo).
